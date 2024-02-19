@@ -6,6 +6,7 @@ import com.ctre.phoenix6.signals.NeutralModeValue;
 import com.revrobotics.CANSparkBase;
 import com.revrobotics.CANSparkMax;
 import edu.wpi.first.wpilibj.motorcontrol.Talon;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Drivetrain extends SubsystemBase {
@@ -34,6 +35,9 @@ public class Drivetrain extends SubsystemBase {
     public void periodic(){
         rightEncoderValue = (m_FL_Motor.getEncoder().getPosition() + m_BL_Motor.getEncoder().getPosition())/2;
         leftEncoderValue = (m_FR_Motor.getEncoder().getPosition() + m_BR_Motor.getEncoder().getPosition())/2;
+
+        SmartDashboard.putNumber("RightSideEncoder", rightEncoderValue);
+        SmartDashboard.putNumber("LeftSideEncoder", leftEncoderValue);
     }
 
     public void cheesyDrive(double speed, double turn, double nerf){
