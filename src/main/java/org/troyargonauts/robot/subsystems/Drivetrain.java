@@ -3,6 +3,7 @@ package org.troyargonauts.robot.subsystems;
 import com.ctre.phoenix6.controls.StaticBrake;
 import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.signals.NeutralModeValue;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Drivetrain extends SubsystemBase {
@@ -31,6 +32,9 @@ public class Drivetrain extends SubsystemBase {
     public void periodic(){
         rightEncoderValue = (m_FL_Motor.getPosition().getValueAsDouble() + m_BL_Motor.getPosition().getValueAsDouble())/2;
         leftEncoderValue = (m_FR_Motor.getPosition().getValueAsDouble() + m_BR_Motor.getPosition().getValueAsDouble())/2;
+
+        SmartDashboard.putNumber("RightSideEncoder", rightEncoderValue);
+        SmartDashboard.putNumber("LeftSideEncoder", leftEncoderValue);
     }
 
     public void cheesyDrive(double speed, double turn, double nerf){
