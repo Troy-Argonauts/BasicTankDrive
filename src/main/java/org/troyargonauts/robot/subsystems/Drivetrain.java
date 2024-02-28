@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Drivetrain extends SubsystemBase {
-    private TalonFX m_FL_Motor, m_FR_Motor, m_BL_Motor, m_BR_Motor;
+    public TalonFX m_FL_Motor, m_FR_Motor, m_BL_Motor, m_BR_Motor;
     private double rightEncoderValue, leftEncoderValue;
     public Drivetrain(){
         m_FL_Motor = new TalonFX(4);
