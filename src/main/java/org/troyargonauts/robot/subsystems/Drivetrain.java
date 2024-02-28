@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Drivetrain extends SubsystemBase {
-    private CANSparkMax m_FL_Motor, m_FR_Motor, m_BL_Motor, m_BR_Motor;
+    public CANSparkMax m_FL_Motor, m_FR_Motor, m_BL_Motor, m_BR_Motor;
     private double rightEncoderValue, leftEncoderValue;
     public Drivetrain(){
         m_FL_Motor = new CANSparkMax(1, CANSparkMax.MotorType.kBrushless);
@@ -22,6 +22,9 @@ public class Drivetrain extends SubsystemBase {
         m_FR_Motor.setIdleMode(CANSparkBase.IdleMode.kBrake);
         m_BL_Motor.setIdleMode(CANSparkBase.IdleMode.kBrake);
         m_BR_Motor.setIdleMode(CANSparkBase.IdleMode.kBrake);
+
+        m_BR_Motor.setInverted(true);
+        m_FR_Motor.setInverted(true);
     }
 
     public void resetEndcoders(){
