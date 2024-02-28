@@ -24,6 +24,9 @@ public class Drivetrain extends SubsystemBase {
         m_BL_Motor.setNeutralMode(NeutralMode.Brake);
         m_BL_Motor.setNeutralMode(NeutralMode.Brake);
 
+        m_BR_Motor.setInverted(true);
+        m_FR_Motor.setInverted(true);
+
     }
 
     public void resetEndcoders(){
