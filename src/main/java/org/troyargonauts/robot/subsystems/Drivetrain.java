@@ -23,6 +23,9 @@ public class Drivetrain extends SubsystemBase {
         m_FR_Motor.setIdleMode(CANSparkBase.IdleMode.kBrake);
         m_BL_Motor.setIdleMode(CANSparkBase.IdleMode.kBrake);
         m_BR_Motor.setIdleMode(CANSparkBase.IdleMode.kBrake);
+
+        m_FR_Motor.setInverted(true);
+        m_BR_Motor.setInverted(true);
     }
 
     public void resetEndcoders(){
