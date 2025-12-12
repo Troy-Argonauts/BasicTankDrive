@@ -14,10 +14,10 @@ public class Drivetrain extends SubsystemBase {
     private TalonSRX m_FL_Motor, m_FR_Motor, m_BL_Motor, m_BR_Motor;
     private double rightEncoderValue, leftEncoderValue;
     public Drivetrain(){
-        m_FL_Motor = new TalonSRX(4);
-        m_FR_Motor = new TalonSRX(3);
-        m_BL_Motor = new TalonSRX(2);
-        m_BR_Motor = new TalonSRX(0);
+        m_FL_Motor = new TalonSRX(1);
+        m_FR_Motor = new TalonSRX(2);
+        m_BL_Motor = new TalonSRX(3);
+        m_BR_Motor = new TalonSRX(4);
 
         m_FL_Motor.setNeutralMode(NeutralMode.Brake);
         m_FR_Motor.setNeutralMode(NeutralMode.Brake);

@@ -34,14 +34,14 @@ public class Robot extends TimedRobot {
 
     @Override
     public void robotInit() {
-        LiveWindow.disableAllTelemetry();
-        LiveWindow.setEnabled(false);
+        //LiveWindow.disableAllTelemetry();
+        //LiveWindow.setEnabled(false);
 
-        DataLogManager.start("/media/sda1/logs");
+        //DataLogManager.start("/media/sda1/logs");
 
         new RobotContainer();
 
-        CameraServer.startAutomaticCapture().setFPS(14);
+        //CameraServer.startAutomaticCapture().setFPS(14);
 
         SmartDashboard.putData("Autonomous modes", chooser);
         chooser.addOption("Nothing", new WaitCommand(15));

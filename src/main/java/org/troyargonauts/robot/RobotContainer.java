@@ -32,8 +32,8 @@ public class RobotContainer {
     private void configureBindings() {
         Robot.getDrivetrain().setDefaultCommand(
                 new RunCommand(() -> {
-                    double speed = driver.getLeftY(); //also multiply by nerf
-                    double turn = driver.getRightX(); //also multiply by nerf
+                    double speed = -driver.getLeftY(); //also multiply by nerf
+                    double turn = -driver.getRightX(); //also multiply by nerf
                     Robot.getDrivetrain().cheesyDrive(speed, turn, 0.8);
                 }, Robot.getDrivetrain())
         );
